@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wishlist</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-slate-600 min-w-[770px]">
+    <div
+      id="payment_popup_body"
+      class="hidden absolute z-[1000] h-lvh w-lvw backdrop-blur-xl"
+    >
+      <div id="popup_centering" class="h-lvh flex justify-center items-center">
+        <div
+          id="popup_window"
+          class="w-[400px] h-[600px] bg-slate-800 rounded-2xl flex-col"
+        >
+          <button
+            id="close_popup"
+            class="text-gray-700 px-3 py-1 border-gray-950 font-extrabold border-[1px] rounded-full float-end left-1 bg-red-400"
+          >
+            X</button
+          ><br /><br />
+          <h3 class="text-sky-100 text-3xl w-fit mx-auto">Pay With</h3>
+          <br />
+          <div
+            class="h-fit w-[380px] mx-auto grid grid-rows-8 bg-gray-600 rounded-2xl"
+          >
+            <h2 id="popup_tot_amt" class="text-[20px] text-sky-100 text-center">
+              hello
+            </h2>
+            <form
+              action=""
+              class="bg-gray-400 w-[90%] row-span-3 mx-auto mt-3 p-2 rounded-lg focus-within:ring-2 focus-within:ring-green-500"
+            >
+              <div id="card_payment" class="mt-4 flex flex-col items-center">
+                <label class="" for="card_number">
+                  <p>
+                    card number
+                    <input
+                      type="number"
+                      id="card_number"
+                      class="focus:outline-none text-center bg-gray-300 rounded-md"
+                    />
+                  </p>
+                </label>
+                <br />
+                <div class="flex">
+                  <label for="cvv">
+                    <p>
+                      cvv
+                      <input
+                        class="focus:outline-none bg-gray-300 w-[50px] mr-3 px-2 rounded-md"
+                        type="password"
+                        id="cvv"
+                      />
+                    </p>
+                  </label>
+                  <label for="name_on_card">
+                    <p>
+                      name on card
+                      <input
+                        class="text-center focus:outline-none bg-gray-300 w-[120px] px-2 rounded-md"
+                        type="text"
+                        id="name_on_card"
+                      />
+                    </p>
+                  </label>
+                </div>
+                <br />
+                <button
+                  class="w-fit px-4 py-2 border-[1px] border-slate-600 bg-slate-400 text-gray-900 rounded-lg"
+                >
+                  Pay with Card
+                </button>
+              </div>
+            </form>
+            <p class="text-5xl row-span-1 h-fit text-sky-100 mx-auto">or</p>
+            <div
+              id="upi_payment"
+              class="bg-gray-400 rounded-lg w-[260px] row-span-4 h-[60%] mx-auto"
+            >
+              <div class="w-fit mx-auto mt-4">
+                <label for="upi_id" class="">
+                  <p>
+                    upi-id
+                    <input
+                      id="upi_id"
+                      type="email"
+                      class="text-center focus:outline-none bg-gray-300 w-[120px] px-2 rounded-md"
+                    />
+                  </p>
+                </label>
+                <button
+                  class="w-fit px-4 m-auto py-2 border-[1px] border-slate-600 bg-slate-400 text-gray-900 rounded-lg mt-4"
+                >
+                  Pay with Upi
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="container" class="flex flex-col">
+      <nav>
+        <div>
+          <a href="index.html"
+            ><button
+              class="bg-slate-900 text-2xl text-sky-100 px-4 py-2 rounded-2xl mt-4 mx-auto cursor-pointer underline grid grid-cols-10"
+            >
+              <img src="https://i.imgflip.com/8h26xs.png" class="w-10" />
+              <p class="col-span-8">go back to products</p>
+            </button></a
+          >
+        </div>
+      </nav>
+
+      <div class="mt-8 flex flex-col">
+        <section
+          id="bill_section"
+          class="grid grid-cols-5 gap-4 mx-5 p-2 rounded-lg bg-slate-700 h-[450px] max-h-[500px] overflow-y-scroll"
+        >
+          <div
+            id="product_list_div"
+            class="bg-slate-900 col-span-3 float-left rounded-lg"
+          >
+            <ul id="product_list">
+              <li class="text-3xl text-center text-gray-400">
+                Product
+                <hr style="color: gray; border-top: 4px double; height: 2px" />
+              </li>
+            </ul>
+          </div>
+          <div
+            id="price_list_div"
+            class="col-span-2 bg-slate-900 float-right rounded-lg"
+          >
+            <ul id="price_list">
+              <li class="text-3xl text-center text-gray-400">
+                Price
+                <hr style="color: gray; border-top: 4px double; height: 2px" />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div>
+        <section
+          id="checkout_section"
+          class="bg-slate-900 h-[170px] mx-auto mt-2 w-[60%] rounded-2xl grid grid-cols-6"
+        >
+          <div
+            class="col-span-4 grid grid-rows-2 bg-gray-600 m-auto h-[80%] rounded-lg w-[70%]"
+          >
+            <h2
+              id="sum_total"
+              class="text-end mr-7 my-auto font-bold text-sky-100 text-[15px]"
+            ></h2>
+            <h3
+              id="taxes"
+              class="text-end mr-7 mb-2 text-sky-100 text-sm font-light"
+            ></h3>
+            <hr style="border-top: dashed" />
+            <h2
+              id="total_amt"
+              class="text-center my-auto font-bold mb-4 text-sky-100 text-[17px]"
+            ></h2>
+          </div>
+          <div class="grid grid-rows-2 col-span-2 gap-4 my-2 ml-2">
+            <button
+              id="clear"
+              class="bg-gray-600 rounded-lg text-2xl my-auto h-[60%] w-[80%] cursor-pointer text-gray-200 active:bg-gray-400"
+            >
+              Clear List
+            </button>
+            <button
+              id="proceed"
+              class="bg-gray-600 rounded-lg text-2xl my-auto h-[60%] w-[80%] cursor-pointer text-gray-200 active:bg-gray-400"
+            >
+              Checkout
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="./wishlist.js" type="module"></script>
+  </body>
+</html>
