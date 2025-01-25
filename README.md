@@ -15,15 +15,24 @@ E-commerce website that fetches products from an API for product name, price, an
 ## Images
 
 landing page::
+
+
 ![image](https://github.com/user-attachments/assets/2a63bff5-b2ae-42d3-818f-3df8e010d4b7)
+
+
 
 
 cart page::
 
+
 ![image](https://github.com/user-attachments/assets/54d74da0-0eb6-458a-adc1-2fc37320c10b)
 
 
+
+
 checkout section::
+
+
 ![image](https://github.com/user-attachments/assets/38dd1429-b3ce-491a-bfd1-f84168814de7)
 
 
