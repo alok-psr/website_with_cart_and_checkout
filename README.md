@@ -3,6 +3,7 @@ This is a frontend-only project made using HTML, CSS, Tailwind, and JavaScript.
 
 ## Theme
 E-commerce website that fetches products from an API for product name, price, and image. The following API from freeapi.app is used to fetch the data: [Free API](https://api.freeapi.app/api/v1/public/randomproducts?page=1&limit=100&inc=category%252Cprice%252Cthumbnail%252Cimages%252Ctitle%252Cid&query=smartphones').
+the image of the product was not available from the api so i just hardcoded a random img  url (enjoy the hamsters 🐹)
 
 ## Project Sections
 
